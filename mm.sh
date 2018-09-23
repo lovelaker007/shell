@@ -1,6 +1,13 @@
 #! /bin/bash
 
-file_or_dir=($(ls ../sh))
-for i in ${file_or_dir[*]}; do
-	cp -R ../sh/$i .
-done
+function f1(){
+    echo 'if you 
+    really wnat it'
+    echo -e 'if you\nreally want it'
+}
+
+function f2(){
+    echo 'something from f2 in mm.sh'
+}
+
+f1
