@@ -65,6 +65,7 @@ function rsyncrestart() {
                rsyncstart
         fi
 }
+
 case $1 in
     "start")
            rsyncstart

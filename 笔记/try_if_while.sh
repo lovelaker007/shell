@@ -2,6 +2,7 @@
 
 :<<!
 循环
+三种表示序列的方法
 for i in $(seq 1 10); do
     echo $((i * 2))
 done
@@ -20,6 +21,11 @@ for (( i=0; i<100; i++ )); do
     fi
 done
 echo 'finish'
+
+for i in {01..10}; do
+    echo $i
+done
+
 
 条件语句
 if []; then

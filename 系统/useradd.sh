@@ -3,10 +3,11 @@
 USER=oldboy
 function add(){
 	for i in {01..10}; do
-		passwd=$( tr -dc 'a-z' < /dev/urandom | head -c -n 8 )
-		useradd $USER$i
-		echo $passwd | passwd $USER$i --stdin
-		echo $USER$i----$passwd >> userpasswd
+        username=$USER$i
+		passwd=$(tr -dc 'a-z' < /dev/urandom | head -c 8)
+		useradd $username
+        echo $username:$passwd | chpasswd
+		echo $username----$passwd >> userpasswd
 	done
 }
 
@@ -33,4 +34,6 @@ function main(){
 	esac
 }
 
-main
+echo $0
+echo $1
+main $1
