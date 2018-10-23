@@ -1,4 +1,4 @@
-#! /bin/bash -xv
+#! /bin/bash 
 
 function fun1 {
 	read -p "enter a number: " num
@@ -10,8 +10,8 @@ function fun1 {
 	fi
 }
 
-fun1
-echo "fun1 return $?"
+#fun1
+#echo "fun1 return $?"
 
 
 # 定义函数function name(){}
@@ -41,25 +41,28 @@ function func2(){
         echo $i
     done
 
+    echo '参数 in "$@"'
+    for i in "$@"; do
+        echo $i
+    done
+
     echo '参数 in $*(单引号)'
     for i in '$*'; do
         echo $i
     done
 
     echo '迭代双引号中的字符串'
-    # 双引号中的字符串被当作一个整体, for循环无法迭代其中的每个由空格分割的字段    
     for i in "if you really want it"; do
         echo $i
     done
 
     echo '迭代ls结果'
-    # ls结果可以被正常迭代
     ls_result=$(ls)
     for i in $ls_result; do
         echo $i
     done
 
 }
-# func2 1 3 4 5
+func2 1 3 4 5
 
 

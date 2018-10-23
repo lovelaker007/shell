@@ -35,7 +35,7 @@ function read_from_file(){
     # 另外一种写法, 不用专门打开文件建立文件描述符
     # while read -r line; do
         # echo line
-    # done <mm_du
+    # done < mm_du
 }
 
 #REPLY_environ_var
