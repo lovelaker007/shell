@@ -2,7 +2,7 @@
 
 function create(){
     base_name='_oldboy.html'
-    for ((i=0; i<10; i++)); do
+    for(( i=0; i<10; i++ )); do
         name=$(tr -dc a-z < /dev/urandom | head -c 10)
         touch $name$base_name
     done

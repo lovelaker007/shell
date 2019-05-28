@@ -1,0 +1,3 @@
+synclient HorizTwoFingerScroll=0
+synclient AreaLeftEdge=2000
+synclient AreaRightEdge=5000
